@@ -147,11 +147,12 @@ ALTER PUBLICATION supabase_realtime ADD TABLE user_coupons;
 -- =====================================================
 -- サンプルデータ（開発用）
 -- =====================================================
-INSERT INTO coupons (title, description, valid_from, valid_to, is_active, usage_limit)
+INSERT INTO coupons (title, description, image_url, valid_from, valid_to, is_active, usage_limit)
 VALUES 
   (
     '全品10%OFF',
     '店内全商品が10%割引でお買い求めいただけます。一部商品（アクセサリー、セール品）を除きます。',
+    '/images/coupons/coupon-10off.jpg',
     NOW() - INTERVAL '7 days',
     NOW() + INTERVAL '30 days',
     true,
@@ -160,6 +161,7 @@ VALUES
   (
     '2点目半額キャンペーン',
     '2点以上お買い上げで2点目が50%OFF！コーディネート買いにおすすめです。',
+    '/images/coupons/coupon-half.jpg',
     NOW() - INTERVAL '3 days',
     NOW() + INTERVAL '14 days',
     true,
@@ -168,6 +170,7 @@ VALUES
   (
     '3,000円OFF',
     '10,000円以上のお買い上げで3,000円割引。高品質なアイテムをお得にゲット！',
+    '/images/coupons/coupon-3000off.jpg',
     NOW(),
     NOW() + INTERVAL '21 days',
     true,
@@ -176,6 +179,7 @@ VALUES
   (
     '送料無料クーポン',
     'オンラインストアでのお買い物が送料無料になります。',
+    '/images/coupons/coupon-shipping.jpg',
     NOW() + INTERVAL '7 days',
     NOW() + INTERVAL '37 days',
     true,
@@ -184,6 +188,7 @@ VALUES
   (
     '会員限定20%OFF',
     'LINE友だち限定！店内全商品が20%割引でお買い求めいただけます。',
+    '/images/coupons/coupon-member.jpg',
     NOW() - INTERVAL '30 days',
     NOW() - INTERVAL '1 day',
     false,
