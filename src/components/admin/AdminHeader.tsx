@@ -26,11 +26,11 @@ export function AdminHeader({ email, onMenuClick, onLogout }: AdminHeaderProps) 
             {/* ロゴ */}
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-beams-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">B</span>
+                <span className="text-white font-bold text-lg">J</span>
               </div>
               <div>
                 <h1 className="text-xl font-bold text-neutral-900">
-                  BEAMS クーポン管理
+                  JAMES クーポン管理
                 </h1>
                 <p className="text-sm text-neutral-500 hidden sm:block">
                   管理画面

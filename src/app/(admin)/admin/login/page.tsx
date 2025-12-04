@@ -36,9 +36,9 @@ export default function AdminLoginPage() {
         {/* ロゴ */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-beams-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-            <span className="text-white font-bold text-3xl">B</span>
+            <span className="text-white font-bold text-3xl">J</span>
           </div>
-          <h1 className="text-2xl font-bold text-neutral-900">BEAMS クーポン管理</h1>
+          <h1 className="text-2xl font-bold text-neutral-900">JAMES クーポン管理</h1>
           <p className="text-neutral-500 mt-1">管理者ログイン</p>
         </div>
 
@@ -65,7 +65,7 @@ export default function AdminLoginPage() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@beams.co.jp"
+                placeholder="admin@james.co.jp"
                 className="input"
                 required
               />
@@ -120,7 +120,7 @@ export default function AdminLoginPage() {
 
         {/* フッター */}
         <p className="text-center text-sm text-neutral-500 mt-8">
-          © 2025 BEAMS Co., Ltd.
+          © 2025 JAMES Co., Ltd.
         </p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 {
-  "name": "beams-coupon-app",
+  "name": "james-coupon-app",
   "version": "1.0.0",
-  "description": "LINEミニアプリ「クーポン機能」プロトタイプ - BEAMS風デザイン",
+  "description": "LINEミニアプリ「クーポン機能」プロトタイプ - JAMES風デザイン",
   "private": true,
   "scripts": {
     "dev": "next dev",

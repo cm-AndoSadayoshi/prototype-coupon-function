@@ -8,10 +8,10 @@ export default function HomePage() {
       <header className="py-6 px-4">
         <div className="max-w-4xl mx-auto flex items-center gap-3">
           <div className="w-12 h-12 bg-beams-500 rounded-xl flex items-center justify-center shadow-beams">
-            <span className="text-white font-bold text-2xl">B</span>
+            <span className="text-white font-bold text-2xl">J</span>
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-neutral-900">BEAMS クーポン</h1>
+            <h1 className="text-2xl font-bold text-neutral-900">JAMES クーポン</h1>
             <p className="text-sm text-neutral-500">プロトタイプ</p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function HomePage() {
               <span className="text-gradient-beams">クーポン機能</span>
             </h2>
             <p className="text-lg text-neutral-600 max-w-xl mx-auto leading-relaxed">
-              BEAMSブランドをイメージした洗練されたデザインで、
+              JAMESブランドをイメージした洗練されたデザインで、
               お客様に快適なクーポン体験を提供します
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
       {/* フッター */}
       <footer className="py-8 px-4 text-center">
         <p className="text-sm text-neutral-500">
-          © 2025 BEAMS Coupon Prototype
+          © 2025 JAMES Coupon Prototype
         </p>
       </footer>
     </div>

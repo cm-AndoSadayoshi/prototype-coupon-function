@@ -15,13 +15,13 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: 'BEAMS クーポン',
-  description: 'BEAMSのクーポンをお得にご利用いただけます',
+  title: 'JAMES クーポン',
+  description: 'JAMESのクーポンをお得にご利用いただけます',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'BEAMS クーポン',
+    title: 'JAMES クーポン',
   },
 };
 

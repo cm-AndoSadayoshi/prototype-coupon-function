@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'BEAMS クーポン',
-  description: 'BEAMSのお得なクーポンをチェック',
+  title: 'JAMES クーポン',
+  description: 'JAMESのお得なクーポンをチェック',
 };
 
 export default function MiniLayout({

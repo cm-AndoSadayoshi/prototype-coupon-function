@@ -21,7 +21,7 @@ export default function AdminLayout({
   return (
     <div className="min-h-screen bg-neutral-50">
       <AdminHeader
-        email="admin@beams.co.jp"
+        email="admin@james.co.jp"
         onMenuClick={() => setSidebarOpen(!sidebarOpen)}
         onLogout={handleLogout}
       />
