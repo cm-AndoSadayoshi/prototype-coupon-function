@@ -24,7 +24,7 @@ const mockCoupon: CouponWithUserStatus = {
   title: '全品10%OFF',
   description:
     '店内全商品が10%割引でお買い求めいただけます。一部商品（アクセサリー、セール品）を除きます。この機会にぜひJAMESでお買い物をお楽しみください。',
-  imageUrl: null,
+  imageUrl: '/images/coupons/coupon-10off.jpg',
   validFrom: '2025-12-01T00:00:00Z',
   validTo: '2025-12-31T23:59:59Z',
   isActive: true,
