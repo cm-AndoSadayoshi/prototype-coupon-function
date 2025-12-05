@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, use } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -18,31 +18,70 @@ import { MogiriAnimation } from '@/components/mini/MogiriAnimation';
 import type { CouponWithUserStatus } from '@/types/coupon';
 import { formatDate, getDaysRemaining } from '@/lib/utils/date';
 
-// モックデータ（開発用）
-const mockCoupon: CouponWithUserStatus = {
-  id: '1',
-  title: '全品10%OFF',
-  description:
-    '店内全商品が10%割引でお買い求めいただけます。一部商品（アクセサリー、セール品）を除きます。この機会にぜひJAMESでお買い物をお楽しみください。',
-  imageUrl: '/images/coupons/coupon-10off.jpg',
-  validFrom: '2025-12-01T00:00:00Z',
-  validTo: '2025-12-31T23:59:59Z',
-  isActive: true,
-  usageLimit: 1,
-  createdAt: '2025-12-01T00:00:00Z',
-  updatedAt: '2025-12-01T00:00:00Z',
-  userStatus: {
-    isUsed: false,
-    usedCount: 0,
-    canUse: true,
+// モックデータ（開発用）- IDに基づいて取得可能
+const mockCoupons: Record<string, CouponWithUserStatus> = {
+  '1': {
+    id: '1',
+    title: '全品10%OFF',
+    description:
+      '店内全商品が10%割引でお買い求めいただけます。一部商品（アクセサリー、セール品）を除きます。この機会にぜひJAMESでお買い物をお楽しみください。',
+    imageUrl: '/images/coupons/coupon-10off.jpg',
+    validFrom: '2025-12-01T00:00:00Z',
+    validTo: '2025-12-31T23:59:59Z',
+    isActive: true,
+    usageLimit: 1,
+    createdAt: '2025-12-01T00:00:00Z',
+    updatedAt: '2025-12-01T00:00:00Z',
+    userStatus: {
+      isUsed: false,
+      usedCount: 0,
+      canUse: true,
+    },
+  },
+  '2': {
+    id: '2',
+    title: '2点目半額キャンペーン',
+    description:
+      '2点以上お買い上げで2点目が50%OFF！コーディネート買いにおすすめです。',
+    imageUrl: '/images/coupons/coupon-half.jpg',
+    validFrom: '2025-12-01T00:00:00Z',
+    validTo: '2025-12-10T23:59:59Z',
+    isActive: true,
+    usageLimit: 1,
+    createdAt: '2025-12-01T00:00:00Z',
+    updatedAt: '2025-12-01T00:00:00Z',
+    userStatus: {
+      isUsed: false,
+      usedCount: 0,
+      canUse: true,
+    },
+  },
+  '3': {
+    id: '3',
+    title: '3,000円OFF',
+    description:
+      '10,000円以上のお買い上げで3,000円割引。高品質なアイテムをお得にゲット！',
+    imageUrl: '/images/coupons/coupon-3000off.jpg',
+    validFrom: '2025-11-01T00:00:00Z',
+    validTo: '2025-11-30T23:59:59Z',
+    isActive: true,
+    usageLimit: 1,
+    createdAt: '2025-11-01T00:00:00Z',
+    updatedAt: '2025-11-01T00:00:00Z',
+    userStatus: {
+      isUsed: true,
+      usedCount: 1,
+      canUse: false,
+    },
   },
 };
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default function CouponDetailPage({ params }: PageProps) {
+  const { id } = use(params);
   const router = useRouter();
   const [coupon, setCoupon] = useState<CouponWithUserStatus | null>(null);
   const [loading, setLoading] = useState(true);
@@ -56,14 +95,19 @@ export default function CouponDetailPage({ params }: PageProps) {
       setError(null);
       // TODO: 実際のAPI呼び出しに置き換え
       await new Promise((resolve) => setTimeout(resolve, 500));
-      setCoupon(mockCoupon);
+      const foundCoupon = mockCoupons[id];
+      if (foundCoupon) {
+        setCoupon(foundCoupon);
+      } else {
+        setError('クーポンが見つかりません');
+      }
     } catch (err) {
       setError('クーポンの取得に失敗しました');
       console.error(err);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [id]);
 
   useEffect(() => {
     fetchCoupon();
