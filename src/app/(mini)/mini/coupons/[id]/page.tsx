@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, use } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -77,11 +77,11 @@ const mockCoupons: Record<string, CouponWithUserStatus> = {
 };
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 export default function CouponDetailPage({ params }: PageProps) {
-  const { id } = use(params);
+  const { id } = params;
   const router = useRouter();
   const [coupon, setCoupon] = useState<CouponWithUserStatus | null>(null);
   const [loading, setLoading] = useState(true);
