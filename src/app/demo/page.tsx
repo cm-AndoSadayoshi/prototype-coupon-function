@@ -11,24 +11,24 @@ export default function DemoPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex flex-col items-center justify-center p-8 relative overflow-hidden">
       {/* 背景装飾 */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl" />
       </div>
 
       {/* ヘッダー */}
       <div className="relative z-10 text-center mb-8">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-4">
-          <Smartphone className="w-4 h-4 text-purple-300" />
-          <span className="text-sm font-medium text-purple-200">LINE Mini App Demo</span>
+          <Smartphone className="w-4 h-4 text-blue-300" />
+          <span className="text-sm font-medium text-blue-200">LINE Mini App Demo</span>
         </div>
         <h1 className="text-3xl font-bold text-white mb-2">
           クーポン機能 プロトタイプ
         </h1>
-        <p className="text-purple-200/80">
+        <p className="text-blue-200/80">
           JAMES アパレルブランド向け LINEミニアプリ
         </p>
       </div>
@@ -96,7 +96,7 @@ export default function DemoPage() {
 
       {/* フッター */}
       <div className="relative z-10 mt-8 text-center">
-        <p className="text-sm text-purple-300/60">
+        <p className="text-sm text-blue-300/60">
           © 2025 JAMES Coupon Prototype
         </p>
       </div>
