@@ -4,6 +4,8 @@ import { isSupabaseAdminConfigured } from '@/lib/supabase/server';
 import { mockUsageLogs } from '@/lib/mock/data';
 import type { Database } from '@/lib/supabase/database.types';
 
+export const dynamic = 'force-dynamic';
+
 // Supabaseクライアントを取得（型安全）
 function getClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

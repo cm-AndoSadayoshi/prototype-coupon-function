@@ -4,6 +4,8 @@ import { isSupabaseAdminConfigured } from '@/lib/supabase/server';
 import { getMockCouponById, getMockUserCouponUsage } from '@/lib/mock/data';
 import type { Database } from '@/lib/supabase/database.types';
 
+export const dynamic = 'force-dynamic';
+
 type CouponRow = Database['public']['Tables']['coupons']['Row'];
 type UserCouponRow = Database['public']['Tables']['user_coupons']['Row'];
 

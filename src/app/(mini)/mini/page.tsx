@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { RefreshCw, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MiniHeader } from '@/components/mini/MiniHeader';
 import { CouponTabs, TabValue } from '@/components/mini/CouponTabs';
@@ -106,20 +106,6 @@ export default function MiniCouponListPage() {
       <MiniHeader title="クーポン" />
 
       <main className="px-4 py-6 space-y-6">
-        {/* リフレッシュボタン */}
-        <div className="flex justify-end">
-          <button
-            onClick={handleRefresh}
-            disabled={isRefreshing}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-sm text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors disabled:opacity-50"
-          >
-            <RefreshCw
-              className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`}
-            />
-            <span>更新</span>
-          </button>
-        </div>
-
         {/* タブ */}
         <CouponTabs
           activeTab={activeTab}
