@@ -50,9 +50,9 @@ export default function DemoPage() {
           <div className="absolute -left-[3px] top-60 w-[3px] h-16 bg-gray-700 rounded-r-sm" />
 
           {/* スクリーンエリア */}
-          <div className="relative bg-black rounded-[45px] overflow-hidden">
-            {/* ダイナミックアイランド */}
-            <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20">
+          <div className="relative bg-black rounded-[45px] overflow-hidden flex flex-col">
+            {/* ダイナミックアイランド（Safe Area Top） */}
+            <div className="flex-shrink-0 h-[50px] bg-white flex items-start justify-center pt-3">
               <div className="w-28 h-7 bg-black rounded-full flex items-center justify-center">
                 <div className="w-2.5 h-2.5 bg-gray-800 rounded-full mr-8" />
               </div>
@@ -62,13 +62,13 @@ export default function DemoPage() {
             <iframe
               key={key}
               src="/mini"
-              className="w-[375px] h-[812px] border-0 bg-white"
+              className="w-[375px] h-[728px] border-0 bg-white flex-shrink-0"
               title="LINE Mini App Demo"
             />
 
-            {/* ホームインジケーター */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 z-20">
-              <div className="w-32 h-1 bg-white/80 rounded-full" />
+            {/* ホームインジケーター（Safe Area Bottom） */}
+            <div className="flex-shrink-0 h-[34px] bg-white flex items-center justify-center">
+              <div className="w-32 h-1 bg-black/20 rounded-full" />
             </div>
           </div>
         </div>
